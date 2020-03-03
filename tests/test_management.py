@@ -3,7 +3,10 @@ import os
 import random
 import string
 import tempfile
-from collections import OrderedDict
+try:
+    from collections.abc import OrderedDict
+except ImportError:
+    from collections import OrderedDict
 
 import pytest
 

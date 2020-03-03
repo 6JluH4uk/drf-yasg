@@ -1,5 +1,8 @@
 import json
-from collections import OrderedDict
+try:
+    from collections.abc import OrderedDict
+except ImportError:
+    from collections import OrderedDict
 
 from drf_yasg import openapi
 from drf_yasg.generators import OpenAPISchemaGenerator

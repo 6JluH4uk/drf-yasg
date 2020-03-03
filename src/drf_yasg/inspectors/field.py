@@ -4,7 +4,10 @@ import logging
 import operator
 import sys
 import uuid
-from collections import OrderedDict
+try:
+    from collections.abc import OrderedDict
+except ImportError:
+    from collections import OrderedDict
 from decimal import Decimal
 
 from django.core import validators

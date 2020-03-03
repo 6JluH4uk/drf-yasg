@@ -1,7 +1,10 @@
 import copy
 import logging
 import re
-from collections import OrderedDict, defaultdict
+try:
+    from collections.abc import OrderedDict, defaultdict
+except ImportError:
+    from collections import OrderedDict, defaultdict
 
 import rest_framework
 import uritemplate

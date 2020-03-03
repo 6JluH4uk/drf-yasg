@@ -1,4 +1,8 @@
-from collections import OrderedDict
+try:
+    from collections.abc import OrderedDict
+except ImportError:
+    from collections import OrderedDict
+
 from random import shuffle
 
 from drf_yasg import openapi

@@ -2,7 +2,10 @@ import inspect
 import logging
 import sys
 import textwrap
-from collections import OrderedDict
+try:
+    from collections.abc import OrderedDict
+except ImportError:
+    from collections import OrderedDict
 from decimal import Decimal
 
 from django.db import models

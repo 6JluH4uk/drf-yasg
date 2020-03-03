@@ -1,6 +1,9 @@
 import json
 import sys
-from collections import OrderedDict
+try:
+    from collections.abc import OrderedDict
+except ImportError:
+    from collections import OrderedDict
 
 import pytest
 from django.conf.urls import url

@@ -1,5 +1,8 @@
 import logging
-from collections import OrderedDict
+try:
+    from collections.abc import OrderedDict
+except ImportError:
+    from collections import OrderedDict
 
 from rest_framework.request import is_form_media_type
 from rest_framework.schemas import AutoSchema
